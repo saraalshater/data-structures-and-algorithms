@@ -9,12 +9,12 @@ Use `forEach` to loop over the input array and work with each value.  Push the n
 ------------------------------------------------------------------------------------------------ */
 
 const addOne = (arr) => {
- 
-    let newArr = [];
-    arr.forEach(element => {
-      newArr.push(element+1);
-    });
-    return newArr;
+  let numArray = [];
+  arr.forEach(element => {
+    numArray.push(element + 1);
+
+  });
+  return numArray;
 
 };
 
@@ -25,16 +25,13 @@ Write a function named `addExclamation` that takes an array of strings, and retu
 
 Use `forEach` to loop over the input array. Modify each string, and add the updated value into a local array. Return the local array;
 ------------------------------------------------------------------------------------------------ */
-let newArr2=[];
+
 const addExclamation = (arr) => {
-  
-  
-    arr.forEach(string =>{
-      newArr2.push(string+'!')
-    })
-    return newArr2 ;
-  
-  
+  let stringArray = [];
+  arr.forEach(element => {
+    stringArray.push(element + '!');
+  });
+  return stringArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -46,7 +43,11 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 ------------------------------------------------------------------------------------------------ */
 
 const allUpperCase = (arr) => {
-  // Solution code here...
+  let upperArray = [ ];
+  arr.forEach(element => {
+    upperArray.push(element.allUpperCase());
+  });
+  return upperArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -60,11 +61,16 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
-  // Solution code here...
+  let newUpperArray = singleString ; 
+  word.forEach(singleString => {
+    newUpperArray.push(singleString.allUpperCase());
+    
+  });
+  return newUpperArray;
 };
 
 const speaker = (words, callback) => {
-  // Solution code here...
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
