@@ -166,9 +166,12 @@ You may also use other string or array methods.
 ------------------------------------------------------------------------------------------------ */
 
 const splitFoods = (recipe) => {
-  let result = [];
-  // Solution code here...
-  return result;
+  let newArray= starWarsArr.sort((a,b) = () =>{
+    
+    return parseInt(b.height, 10) - parseInt(a.height, 10);
+      
+    })
+    return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
