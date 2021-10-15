@@ -3,6 +3,7 @@
  */
 package staks.queue;
 
+import staks.queue.structure.PseudoQueue;
 import staks.queue.structure.Queues;
 import staks.queue.structure.Stack;
 
@@ -25,22 +26,53 @@ public class Main {
 
 
 
+
+
+//
+
+
+
+
     Queues nodeTwo = new Queues();
 
     nodeTwo.enqueue("SARA");
-    nodeTwo.enqueue("SA");
-    nodeTwo.enqueue("S");
+    nodeTwo.enqueue("SAR");
+    nodeTwo.enqueue("A");
 
     nodeTwo.peek();
 
 
-
-    System.out.println(nodeTwo.peek());
+//        System.out.println(nodeTwo.peek());
 
 //        nodeOne.pop();
 //        System.out.println(nodeOne);
 //
 //        System.out.println(nodeOne.peek());
+
+
+
+//
+//        Brackets stack1 = new Brackets();
+//
+//
+//        System.out.println(stack1.bracketValidation("{[]]]}"));
+
+
+
+    PseudoQueue queue = new PseudoQueue();
+
+//
+
+    queue.dequeue();
+
+
+
+//
+    System.out.println(queue);
+//
+//        System.out.println(queue.dequeue());
+
+
 
 
   }
