@@ -61,15 +61,15 @@ public class Main {
 
     PseudoQueue queue = new PseudoQueue();
 
-//
+
 
     queue.dequeue();
 
 
 
-//
+
     System.out.println(queue);
-//
+
 //        System.out.println(queue.dequeue());
 
 

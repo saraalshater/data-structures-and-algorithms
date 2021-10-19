@@ -3,7 +3,9 @@
  */
 package staks.queue;
 
+
 import org.junit.jupiter.api.Test;
+import staks.queue.structure.PseudoQueue;
 import staks.queue.structure.Queues;
 import staks.queue.structure.Stack;
 
@@ -21,6 +23,7 @@ class LibraryTest {
   }
 
 
+
   @Test
   public void popTest() {
     Stack nodeOne = new Stack();
@@ -33,91 +36,134 @@ class LibraryTest {
     assertEquals("Stack{top=Node{data='SAR', next=Node{data='SARA', next=null}}}",nodeOne.toString());
 
   }
-  //
-  @Test
-  public void peekTest() {
-    Stack nodeOne = new Stack();
-
-    nodeOne.push("SARA");
-    nodeOne.push("SAR");
-    nodeOne.push("S");
-    nodeOne.peek();
-
-    assertEquals("S",nodeOne.peek());
-
-  }
-  @Test
-  public void checkIsEmpty() {
-    Stack nodeOne = new Stack();
-
-    nodeOne.push("SARA");
-    nodeOne.push("SAR");
-    nodeOne.push("S");
-    nodeOne.pop();
-    nodeOne.pop();
-    nodeOne.pop();
-
-//        assertTrue(true, nodeOne.isEmpty());
-
-  }
-  //
+//  //
+//  @Test
+//  public void peekTest() {
+//    Stack nodeOne = new Stack();
+//
+//    nodeOne.push("SARA");
+//    nodeOne.push("SAR");
+//    nodeOne.push("S");
+//    nodeOne.peek();
+//
+//    assertEquals("S",nodeOne.peek());
+//
+//  }
+//  @Test
+//  public void checkIsEmpty() {
+//    Stack nodeOne = new Stack();
+//
+//    nodeOne.push("SARA");
+//    nodeOne.push("SAR");
+//    nodeOne.push("S");
+//    nodeOne.pop();
+//    nodeOne.pop();
+//    nodeOne.pop();
+//
+////        assertTrue(true, nodeOne.isEmpty());
+//
+//  }
+//  //
+////
+////
+//  @Test
+//  public void enqueueTest() {
+//    Queues nodeTwo = new Queues();
+//
+//    nodeTwo.enqueue("SARA");
+//    nodeTwo.enqueue("SAR");
+//    nodeTwo.enqueue("S");
+//
+//    assertEquals("Queues{front=Node{data='SARA', next=Node{data='SAR', next=Node{data='S', next=null}}}, rear=Node{data='S', next=null}}",nodeTwo.toString());
 //
 //
-  @Test
-  public void enqueueTest() {
-    Queues nodeTwo = new Queues();
-
-    nodeTwo.enqueue("SARA");
-    nodeTwo.enqueue("SAR");
-    nodeTwo.enqueue("S");
-
-    assertEquals("Queues{front=Node{data='SARA', next=Node{data='SAR', next=Node{data='S', next=null}}}, rear=Node{data='S', next=null}}",nodeTwo.toString());
-
-
-  }
-  //
+//  }
+//  //
+////
+//  @Test
+//  public void dequeueTest() {
+//    Queues nodeTwo = new Queues();
 //
+//    nodeTwo.enqueue("SARA");
+//    nodeTwo.enqueue("SAR");
+//    nodeTwo.enqueue("S");
+//    nodeTwo.dequeue();
+//
+//    assertEquals("SAR",nodeTwo.dequeue());
+//
+//
+//  }
+//
+//  private void assertEquals(String sar, String dequeue) {
+//  }
+//
+//  @Test
+//  public void peekQueueTest() {
+//    Queues nodeTwo = new Queues();
+//
+//    nodeTwo.enqueue("SARA");
+//    nodeTwo.enqueue("SAR");
+//    nodeTwo.enqueue("S");
+//    nodeTwo.peek();
+//
+//    assertEquals("SARA",nodeTwo.peek());
+//
+//
+//  }
+//  @Test
+//  public void queueIsEmptyTest() {
+//    Queues nodeTwo = new Queues();
+//
+//    nodeTwo.enqueue("SARA");
+//    nodeTwo.enqueue("SAR");
+//    nodeTwo.enqueue("S");
+//    nodeTwo.dequeue();
+//    nodeTwo.dequeue();
+//    nodeTwo.dequeue();
+//
+//    assertTrue(nodeTwo.isEmpty());
+//
+//
+//  }
+//
+////  @Test
+////  public void validateBracketsTest(){
+////
+////    Brackets stack1 = new Brackets();
+////
+////
+////    assertTrue(stack1.bracketValidation("[]{}()"));
+////    assertFalse(stack1.bracketValidation("[{)}]"));
+////    assertFalse(stack1.bracketValidation("(]("));
+////
+////
+////  }
+
   @Test
-  public void dequeueTest() {
-    Queues nodeTwo = new Queues();
+  public void enqueueTestPsudo() {
 
-    nodeTwo.enqueue("SARA");
-    nodeTwo.enqueue("SAR");
-    nodeTwo.enqueue("S");
-    nodeTwo.dequeue();
 
-    assertEquals("SAR",nodeTwo.dequeue());
+    PseudoQueue queue = new PseudoQueue();
 
+    queue.enqueue("Sara");
+    queue.enqueue("Alshater");
+
+    assertEquals("stack1========>Stack{top=Node{data='Alshater', next=Node{data='Sara', next=null}}}", queue.toString());
+  }
+
+  @Test
+  public void dequeueTestPseudo(){
+
+    PseudoQueue queue = new PseudoQueue();
+
+    queue.enqueue("Sara");
+    queue.enqueue("Alshater");
+    queue.dequeue();
+
+
+
+    assertEquals("stack1========>Stack{top=Node{data='Alshater', next=Node{data='Sara', next=null}}}",queue.toString());
 
   }
-  @Test
-  public void peekQueueTest() {
-    Queues nodeTwo = new Queues();
-
-    nodeTwo.enqueue("SARA");
-    nodeTwo.enqueue("SAR");
-    nodeTwo.enqueue("S");
-    nodeTwo.peek();
-
-    assertEquals("SARA",nodeTwo.peek());
-
-
-  }
-  @Test
-  public void queueIsEmptyTest() {
-    Queues nodeTwo = new Queues();
-
-    nodeTwo.enqueue("SARA");
-    nodeTwo.enqueue("SAR");
-    nodeTwo.enqueue("S");
-    nodeTwo.dequeue();
-    nodeTwo.dequeue();
-    nodeTwo.dequeue();
-
-    assertTrue(nodeTwo.isEmpty());
-
-
-  }
-
 
 }
