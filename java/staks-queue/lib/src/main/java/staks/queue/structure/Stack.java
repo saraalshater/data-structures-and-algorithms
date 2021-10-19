@@ -3,83 +3,67 @@ package staks.queue.structure;
 import staks.queue.data.Node;
 
 
-public class Stack {
+public class Stack<G> {
+  private int idx;
+  private Node<G> top;
 
-    private Node top;
+  public Stack() {
+    this.idx = -1;
+  }
 
-
-    public Stack() {
-
+  public int getIdx() {
+    return idx;
+  }
+  public void push (G data) {
+    Node newNode = new Node(data);
+    if(top == null) {
+      top = newNode;
+      top.next = null;
     }
 
-    public void push(String data) {
-      if (isEmpty()) {
-        Node node = new Node(data);
-        top = node;
-      } else {
-        Node node = new Node(data);
-        node.setNext(top);
-        top = node;
-      }
+    else {
+      newNode.next = top;
+      top = newNode;
     }
-
-    public String pop() {
-      if (isEmpty()) {
-        return "Empty";
-      } else {
-        String data = top.getData();
-        top = top.getNext();
-        return data;
-      }
+    idx++;
+  }
+  public G pop () {
+    if (top == null) {
+      throw new NullPointerException();
     }
+    Node<G> popped = top;
+    top = top.next;
+    idx--;
+    return popped.data;
+  }
 
-    public String peek() {
-      if (isEmpty()) {
-        return "Empty";
-      } else {
-        return top.getData();
-      }
+  public G peek () {
+    if(idx < 0) {
+      throw new NullPointerException();
     }
-
-
-
-    @Override
-    public String toString() {
-      return "Stack{" +
-        "top=" + top +
-        '}';
-    }
-
-
-
-    public boolean isEmpty() {
-      return top == null;
-    }
-
-    public Node getTop() {
-      return top;
-    }
-
-
-    public Integer getMaximum() {
-
-      if(top == null){
-
-        return 0;
-
-      }
-      int number = 0;
-      while(top != null){
-        if(Integer.parseInt(top.getData()) > number){
-
-          number = Integer.parseInt(top.getData());
-
-        }
-        pop();
-      }
-
-      return number;
-
-    }
+    return top.data;
 
   }
+
+  public boolean isEmpty() {
+    if(idx >= 0){
+      return false;
+    }
+    return true;
+  }
+
+
+
+
+  @Override
+  public String toString() {
+    String stackData = "";
+    Node<G> trav = top;
+    while (trav != null) {
+      stackData += trav.data + " -> ";
+      trav = trav.next;
+    }
+    stackData += "Null";
+    return stackData;
+  }
+}

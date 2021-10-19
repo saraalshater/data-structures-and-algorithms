@@ -3,43 +3,44 @@
  */
 package staks.queue;
 
-import staks.queue.structure.PseudoQueue;
-import staks.queue.structure.Queues;
-import staks.queue.structure.Stack;
+import staks.queue.structure.Animal;
+import staks.queue.structure.AnimalShelter;
+//import staks.queue.structure.PseudoQueue;
+
 
 public class Main {
   public static void main(String[] args) {
-    Stack nodeOne = new Stack();
-
-    nodeOne.push("SARA");
-    nodeOne.push("SAR");
-    nodeOne.push("S");
-
-
-//        System.out.println(nodeOne);
-
-//        nodeOne.pop();
-//        System.out.println(nodeOne);
+//    Stack nodeOne = new Stack();
 //
-//        System.out.println(nodeOne.peek());
-
-
-
-
-
-
+//    nodeOne.push("SARA");
+//    nodeOne.push("SAR");
+//    nodeOne.push("S");
 //
-
-
-
-
-    Queues nodeTwo = new Queues();
-
-    nodeTwo.enqueue("SARA");
-    nodeTwo.enqueue("SAR");
-    nodeTwo.enqueue("A");
-
-    nodeTwo.peek();
+//
+////        System.out.println(nodeOne);
+//
+////        nodeOne.pop();
+////        System.out.println(nodeOne);
+////
+////        System.out.println(nodeOne.peek());
+//
+//
+//
+//
+//
+//
+////
+//
+//
+//
+////
+//    Queue nodeTwo = new Queue();
+//
+//    nodeTwo.enqueue("SARA");
+//    nodeTwo.enqueue("SAR");
+//    nodeTwo.enqueue("A");
+//
+//    nodeTwo.peek();
 
 
 //        System.out.println(nodeTwo.peek());
@@ -57,23 +58,34 @@ public class Main {
 //
 //        System.out.println(stack1.bracketValidation("{[]]]}"));
 
-
-
-    PseudoQueue queue = new PseudoQueue();
-
-
-
-    queue.dequeue();
-
-
-
-
-    System.out.println(queue);
+//
+//
+//    PseudoQueue queue = new PseudoQueue();
+//
+//
+//
+//    queue.dequeue();
+//
+//
+//
+//
+//    System.out.println(queue);
 
 //        System.out.println(queue.dequeue());
 
 
+    AnimalShelter shelter = new AnimalShelter();
+      shelter.enqueue(new Animal("cat"));
+      shelter.enqueue(new Animal("dog"));
+      shelter.enqueue(new Animal("cat"));
+      shelter.enqueue(new Animal("dog"));
 
+      System.out.println(shelter.getDogs());
+
+
+//ValidateBrackets validateBrackets = new ValidateBrackets();
+//
+//      System.out.println(validateBrackets.check("()"));
 
   }
 
