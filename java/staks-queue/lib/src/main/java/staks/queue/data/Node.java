@@ -1,35 +1,28 @@
 package staks.queue.data;
 
 
-public class Node {
-  String data;
-  Node next;
+public class Node<T> {
+  public Node<T> next;
+  public T data;
 
-  public Node(String data) {
+  public Node( T data) {
+    this.next = null;
     this.data = data;
   }
 
-  public String getData() {
-    return data;
-  }
-
-  public void setData(String data) {
-    this.data = data;
-  }
-
-  public Node getNext() {
+  public Node<T> getNext() {
     return next;
   }
 
-  public void setNext(Node next) {
+  public void setNext(Node<T> next) {
     this.next = next;
   }
 
-  @Override
-  public String toString() {
-    return "Node{" +
-      "data='" + data + '\'' +
-      ", next=" + next +
-      '}';
+  public T getData() {
+    return data;
+  }
+
+  public void setData(T data) {
+    this.data = data;
   }
 }
