@@ -8,7 +8,7 @@ public class App {
         return "Hello World!";
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
 
 
@@ -24,6 +24,9 @@ public class App {
       System.out.println(newTree.contain(70));
 
       System.out.println(new App().getGreeting());
+
+      System.out.println(newTree.getMax());
+      System.out.println(newTree.breadthFirst(newTree));
 
     }
 }

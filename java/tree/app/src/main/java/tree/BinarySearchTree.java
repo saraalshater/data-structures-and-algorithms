@@ -1,5 +1,8 @@
 package tree;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class BinarySearchTree<T extends Comparable<T>> {
   private BinaryNode<T> root;
 
@@ -74,6 +77,27 @@ public class BinarySearchTree<T extends Comparable<T>> {
   }
 
 
+
+  public List<T> breadthFirst(BinarySearchTree<T> tree){
+    if(root==null) {return null;}
+    Queue<BinaryNode<T>>queue = new Queue<>();
+    List<T> list = new ArrayList<>();
+    queue.enqueue(root);
+    list.add((T) root.getData());
+    while (!queue.isEmpty()){
+      try {
+        BinaryNode<T> node = queue.dequeue();
+        if(node.getLeftNode()!=null){
+          queue.enqueue(node.getLeftNode());
+          list.add((T) node.getLeftNode().getData());
+        }if(node.getRightNode()!=null){
+          queue.enqueue(node.getRightNode());
+          list.add((T) node.getRightNode().getData());
+        }
+      }catch (Exception e){e.printStackTrace();}
+    }
+    return list;
+  }
 
 
 }
