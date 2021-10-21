@@ -7,37 +7,63 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
-    }
-
-
-
-
+//    @Test void appHasAGreeting() {
+//        App classUnderTest = new App();
+//        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+//    }
+//
+//
+//
+//
+//
+//  @Test
+//  void instantiateEmptyTreeTest(){
+//    BinarySearchTree newTree = new BinarySearchTree();
+//    assertTrue(newTree.isEmpty(),"should return true because tree is empty");
+//  }
+//
+//  @Test
+//  void   treeWithSingleRootNodeTest() {
+//    BinarySearchTree newTree = new BinarySearchTree();
+//    newTree.add(50);
+//    assertTrue(newTree.contain(50),"should return true because there is a single node which is the root and it's value equal 50");
+//
+//  }
+//
+//  @Test
+//  void AddLeftRightTest() {
+//    BinarySearchTree newTree = new BinarySearchTree();
+//    newTree.add(50);
+//    newTree.add(60);
+//    newTree.add(40);
+//    assertTrue(newTree.contain(60),"should return true because the value of the right node equal 60");
+//    assertTrue(newTree.contain(40),"should return true because the value of the left node equal 40");
+//
+//  }
 
   @Test
-  void instantiateEmptyTreeTest(){
-    BinarySearchTree newTree = new BinarySearchTree();
-    assertTrue(newTree.isEmpty(),"should return true because tree is empty");
-  }
-
-  @Test
-  void   treeWithSingleRootNodeTest() {
-    BinarySearchTree newTree = new BinarySearchTree();
-    newTree.add(50);
-    assertTrue(newTree.contain(50),"should return true because there is a single node which is the root and it's value equal 50");
-
-  }
-
-  @Test
-  void AddLeftRightTest() {
+  void getMaxTest() throws Exception {
     BinarySearchTree newTree = new BinarySearchTree();
     newTree.add(50);
     newTree.add(60);
     newTree.add(40);
-    assertTrue(newTree.contain(60),"should return true because the value of the right node equal 60");
-    assertTrue(newTree.contain(40),"should return true because the value of the left node equal 40");
+    assertEquals(60,newTree.getMax());
+  }
 
+  @Test
+  void getMaxTest2() throws Exception {
+    BinarySearchTree newTree = new BinarySearchTree();
+    newTree.add(50);
+    assertEquals(50,newTree.getMax());
+  }
+
+  @Test
+  void getMaxTest3()  {
+    BinarySearchTree newTree = new BinarySearchTree();
+    try {
+      System.out.println(newTree.getMax());
+    } catch (Exception e) {
+      assertEquals("Tree is empty", e.getMessage());
+    }
   }
 }
