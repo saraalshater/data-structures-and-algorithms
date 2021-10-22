@@ -66,4 +66,15 @@ class AppTest {
       assertEquals("Tree is empty", e.getMessage());
     }
   }
+
+  @Test
+  void breadthFirstTest()  {
+    BinarySearchTree newTree = new BinarySearchTree();
+    newTree.add(50);
+    newTree.add(40);
+    newTree.add(60);
+    newTree.add(70);
+    newTree.add(20);
+    assertNotNull(newTree.breadthFirst(newTree));
+  }
 }
