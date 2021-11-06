@@ -71,4 +71,4 @@ ALGORITHM Swap(arr, i, low)
 ```
 
 ## Trace
-![trace]()
+![trace](https://raw.githubusercontent.com/saraalshater/data-structures-and-algorithms/code27/java/codeChallange28/gradle/code-challeng-28.png)
