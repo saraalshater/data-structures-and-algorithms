@@ -3,12 +3,50 @@
  */
 package codeChallange28;
 
-public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+import java.util.Arrays;
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+public class App {
+  public void quickSort(int[] arr, int left, int right){
+
+
+    if(arr.length < 2)
+      return;
+
+    if(left < right){
+
+
+      int position = partition(arr, left, right);
+      quickSort(arr, left, position - 1);
+      quickSort(arr, position + 1, right);
     }
+  }
+
+  public int partition(int[] arr, int left, int right){
+
+    int pivot = arr[right];
+
+    int low = left - 1;
+    for(int i = left; i < right; i++){
+      if ( arr[i] <= pivot){
+        low ++;
+        swap(arr, i, low);
+      }
+    }
+    swap(arr, right, low + 1);
+    return low + 1;
+  }
+
+  public void swap(int[] arr, int i, int low){
+    int temp;
+    temp = arr[i];
+    arr[i] = arr[low];
+    arr[low] = temp;
+  }
+  public static void main(String[] args) {
+    int[] quickSortArr = {8, 4, 23, 42, 16, 15};
+    App quickSort = new App();
+
+    quickSort.quickSort(quickSortArr,0,5);
+    System.out.println("Quick sort" + Arrays.toString(quickSortArr));
+  }
 }

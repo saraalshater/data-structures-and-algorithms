@@ -4,11 +4,59 @@
 package codeChallange28;
 
 import org.junit.jupiter.api.Test;
+
+import java.util.Arrays;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
-    }
+  @Test
+  public void quickSortTest1(){
+
+    int[] quickSortArr1 = {8, 4, 23, 42, 16, 15};
+    App quickSort = new App();
+
+    quickSort.quickSort(quickSortArr1,0,5);
+    assertEquals("[4, 8, 15, 16, 23, 42]", Arrays.toString(quickSortArr1));
+  }
+
+  @Test
+  public void quickSortTest2(){
+
+    int[] quickSortArr2 = {20, 18, 12, 8, 5, -2};
+    App quickSort = new App();
+
+    quickSort.quickSort(quickSortArr2,0,5);
+    assertEquals("[-2, 5, 8, 12, 18, 20]", Arrays.toString(quickSortArr2));
+  }
+
+  @Test
+  public void quickSortTest3(){
+
+    int[] quickSortArr3 = {5, 12, 7, 5, 5, 7};
+    App quickSort = new App();
+
+    quickSort.quickSort(quickSortArr3,0,5);
+    assertEquals("[5, 5, 5, 7, 7, 12]", Arrays.toString(quickSortArr3));
+  }
+
+  @Test
+  public void quickSortTest4(){
+
+    int[] quickSortArr4 = {2, 3, 5, 7, 13, 11,17};
+    App quickSort = new App();
+
+    quickSort.quickSort(quickSortArr4,0,5);
+    assertEquals("[2, 3, 5, 7, 11, 13, 17]", Arrays.toString(quickSortArr4));
+  }
+
+  @Test
+  public void quickSortTest5(){
+
+    int[] quickSortArr5 = {2};
+    App quickSort = new App();
+
+    quickSort.quickSort(quickSortArr5,0,5);
+    assertEquals("[2]", Arrays.toString(quickSortArr5));
+  }
 }
