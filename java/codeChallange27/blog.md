@@ -35,4 +35,4 @@ set remaining entries in arr to remaining values in left
 ```
 
 ### Visual
-![visuals]()
+![visuals](https://raw.githubusercontent.com/saraalshater/data-structures-and-algorithms/code27/java/codeChallange27/gradle/blog27.png)
