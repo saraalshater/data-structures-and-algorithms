@@ -8,16 +8,22 @@ public class App {
 
     HashTable<String, Integer> grades = new HashTable<String, Integer>();
 
-    grades.add("Hatem",100);
-    grades.add("Tareq", 30);
-    grades.add("Doaa", 10);
+    grades.add("Sara",100);
+    grades.add("LEEN", 30);
+    grades.add("GHADEER", 10);
     grades.add("Jason", 5);
 
     System.out.println("The size is => " + grades.getSize());
-    System.out.println(grades.get("Hatem"));
-    System.out.println("Delete Tareq => " + grades.remove("Tareq"));
+    System.out.println(grades.get("Sara"));
+    System.out.println("Delete LEEN => " + grades.remove("LEEN"));
     System.out.println("The size is => " + grades.getSize());
     System.out.println(grades.contains("ss"));
-    System.out.println(grades.contains("Hatem"));
+    System.out.println(grades.contains("Sara"));
+
+
+    String paragraph1 = "Once upon a time, there was a brave princess who...";
+    String paragraph2 = "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way – in short, the period was so far like the present period, that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only";
+    String paragraph3= "It was a queer, sultry summer, the summer they electrocuted the Rosenbergs, and I didn’t know what I was doing in New York";
+    System.out.println(grades.repeatedWord(paragraph3));
   }
 }
