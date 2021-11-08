@@ -20,4 +20,5 @@ Implement a Hashtable Clas
 ## code challange 31 whiteBoard
 
 
-![code31](/code31.jpg)
+![code31]()
+
