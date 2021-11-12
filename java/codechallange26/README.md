@@ -3,7 +3,7 @@ Implement Insertion sort by following up a pseudo Code.
 
 ### whiteboard
 
-![whiteBoard]()
+![whiteBoard](https://raw.githubusercontent.com/saraalshater/data-structures-and-algorithms/main/java/codechallange26/gradle/code26.jpg)
 
 
 
