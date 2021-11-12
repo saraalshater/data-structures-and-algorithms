@@ -7,6 +7,9 @@ import BinaryTree.BinaryTree;
 import BinaryTree.Node;
 
 import org.junit.jupiter.api.Test;
+
+import java.util.HashMap;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
@@ -124,6 +127,51 @@ class AppTest {
     assertEquals("[100, 200]", trees.treeIntersection(tree1,tree2).toString());
 
   }
+
+//    <<< Code Challenge 33 >>>
+
+  @Test
+  public void testLeftWithAllJoins(){
+    HashMap h1 = new HashMap();
+    h1.put("fond", "enamored");
+    h1.put("wrath", "anger");
+    h1.put("flow", "jam");
+
+    HashMap h2 = new HashMap();
+    h2.put("fond", "averse");
+    h2.put("wrath", "delight");
+    h2.put("flow", "test");
+
+    assertEquals("[wrath: [ anger, delight ], flow: [ jam, test ], fond: [ enamored, averse ]]", App.leftJoin(h1, h2).toString());
+  }
+
+
+
+  @Test
+  public void testLeftWithEmptySecondHashMap(){
+    HashMap h1 = new HashMap();
+    h1.put("fond", "enamored");
+    h1.put("wrath", "anger");
+    h1.put("diligent", "employed");
+    h1.put("outfit", "garb");
+    h1.put("guide", "usher");
+
+    HashMap h2 = new HashMap();
+
+    assertEquals("[diligent: [ employed, null ], outfit: [ garb, null ], wrath: [ anger, null ], guide: [ usher, null ], fond: [ enamored, null ]]", App.leftJoin(h1, h2).toString());
+
+  }
+
+  @Test
+  public void testLeftBothEmptyHashMap(){
+    HashMap h1 = new HashMap();
+    HashMap h2 = new HashMap();
+
+    assertEquals("[]", App.leftJoin(h1, h2).toString());
+
+  }
+
+
 
 
 

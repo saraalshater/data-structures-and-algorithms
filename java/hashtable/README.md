@@ -30,4 +30,11 @@ Implement a Hashtable Clas
 ## code challange 32 whiteBoard
 
 
-![code32]()
+![code32](https://raw.githubusercontent.com/saraalshater/data-structures-and-algorithms/main/java/hashtable/gradle/code32.jpg)
+
+
+
+
+
+## code challange 32 whiteBoard
+![code33]()
