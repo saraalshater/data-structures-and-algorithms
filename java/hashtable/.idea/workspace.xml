@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecb353c6-37e1-44f4-b56d-e8017c211cf8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/BinaryTree/BinaryTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/BinaryTree/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/33.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/hashtable/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hashtable/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/hashtable/HashTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hashtable/HashTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/test/java/hashtable/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/hashtable/AppTest.java" afterDir="false" />
@@ -46,6 +43,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="20eOR85JEOeqSkkJppzuNtnsMZ2" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -55,12 +60,18 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/gradle" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
-  <component name="RunManager" selected="JUnit.AppTest.intersectionTreeDifferentNumOfNodes">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu\home\saraalshater\401\data-structures-and-algorithms\java\hashtable\gradle" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.AppTest.testLeftWithAllJoins">
     <configuration name="App" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="hashtable.App" />
       <module name="hashtable.app.main" />
@@ -137,24 +148,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTest,test and 1 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AppTest.testLeftWithAllJoins" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hashtable.app.test" />
-      <option name="TEST_OBJECT" value="pattern" />
-      <patterns>
-        <pattern testClass="hashtable.AppTest,test" />
-        <pattern testClass="hashtable.AppTest,repeatedWordTest" />
-      </patterns>
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hashtable.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hashtable" />
+      <option name="MAIN_CLASS_NAME" value="hashtable.AppTest" />
+      <option name="METHOD_NAME" value="testLeftWithAllJoins" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AppTest.testLeftWithAllJoins" />
         <item itemvalue="JUnit.AppTest.intersectionTreeDifferentNumOfNodes" />
         <item itemvalue="JUnit.AppTest.intersectionTreeTest" />
         <item itemvalue="JUnit.AppTest.repeatedWordTest" />
         <item itemvalue="JUnit.AppTest" />
-        <item itemvalue="JUnit.AppTest,test and 1 more" />
       </list>
     </recent_temporary>
   </component>
