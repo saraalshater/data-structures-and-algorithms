@@ -96,4 +96,54 @@ class AppTest {
 
     assertEquals("Vertex{label='Sara'}[]",graph.printGraph());
   }
+
+  //    <<<Code Challenge 36 >>
+  @Test
+  public void breadthFirst(){
+
+    Graph graph1 = new Graph();
+
+    graph1.addVertex("Sara");
+    graph1.addVertex("Tareq");
+    graph1.addVertex("Doaa");
+    graph1.addVertex("Mohammad");
+    graph1.addVertex("Osaid");
+    graph1.addVertex("Naim");
+
+    graph1.addEdge("Sara", "Tareq");
+    graph1.addEdge("Tareq", "Doaa");
+    graph1.addEdge("Tareq", "Mohammad");
+    graph1.addEdge("Doaa", "Osaid");
+    graph1.addEdge("Doaa", "Naim");
+    graph1.addEdge("Doaa", "Mohammad");
+    graph1.addEdge("Mohammad", "Naim");
+    graph1.addEdge("Osaid", "Naim");
+
+
+    assertEquals("[Sara, Tareq, Doaa, Mohammad, Osaid, Naim]", graph1.breadthTraverse("Sara").toString());
+  }
+
+  @Test
+  public void breadthFirstOneVertex(){
+
+    Graph graph1 = new Graph();
+
+    graph1.addVertex("Sara");
+    assertEquals("[Sara]",graph1.breadthTraverse( "Sara").toString());
+  }
+
+  //    THIS TEST FOR THREE VERTICES AND ONE OF THEM DID NOT CONNECT WITH THE OTHER TWO VERTICES
+  @Test
+  public void breadthFirstTest(){
+
+    Graph graph1 = new Graph();
+
+    graph1.addVertex("Sara");
+    graph1.addVertex("Tareq");
+    graph1.addVertex("Doaa");
+
+    graph1.addEdge("Sara", "Tareq");
+
+    assertEquals("[Sara, Tareq]",graph1.breadthTraverse( "Sara").toString());
+  }
 }

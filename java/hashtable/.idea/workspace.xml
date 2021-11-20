@@ -5,11 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecb353c6-37e1-44f4-b56d-e8017c211cf8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/gradle/33.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../graph/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../graph/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../graph/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../graph/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../graph/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../graph/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../graph/app/src/main/java/graph/Graph.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../graph/app/src/main/java/graph/Vertex.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/hashtable/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hashtable/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/hashtable/HashTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hashtable/HashTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/hashtable/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/hashtable/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
