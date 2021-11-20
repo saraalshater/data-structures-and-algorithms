@@ -11,27 +11,27 @@ public class Graph {
   }
 
   void addVertex(String data) {
-    Vertex vertex = new Vertex(data);
+    Vertex vertex = new Vertex(data, weight);
     adjVertices.putIfAbsent(vertex, new ArrayList<>());
   }
 
   void addEdge(String data1, String data2) {
-    Vertex vertex1 = new Vertex(data1);
-    Vertex vertex2 = new Vertex(data2);
+    Vertex vertex1 = new Vertex(data1, weight);
+    Vertex vertex2 = new Vertex(data2, weight);
 
     adjVertices.get(vertex1).add(vertex2);
     adjVertices.get(vertex2).add(vertex1);
   }
 
   void removeVertex(String data) {
-    Vertex vertex = new Vertex(data);
+    Vertex vertex = new Vertex(data, weight);
     adjVertices.values().forEach(list -> list.remove(vertex));
     adjVertices.remove(vertex);
   }
 
   void removeEdge(String data1, String data2) {
-    Vertex vertex1 = new Vertex(data1);
-    Vertex vertex2 = new Vertex(data2);
+    Vertex vertex1 = new Vertex(data1, weight);
+    Vertex vertex2 = new Vertex(data2, weight);
 
     List<Vertex> edgeVertex1 = adjVertices.get(vertex1);
     List<Vertex> edgeVertex2 = adjVertices.get(vertex2);
@@ -100,7 +100,7 @@ public class Graph {
   }
 
   public List<Vertex> getNeighbors(String data) {
-    return adjVertices.get(new Vertex(data));
+    return adjVertices.get(new Vertex(data, weight));
   }
 
 
@@ -123,4 +123,42 @@ public class Graph {
     }
     return visited;
   }
+
+  //    <<< Code Challenge Code 37 >>>
+
+  public void addEdgeWithWeight(String data1, String data2, int weight) {
+    Vertex Vertex1 = new Vertex(data1, weight);
+    Vertex Vertex2 = new Vertex(data2, weight);
+
+
+    adjVertices.get(Vertex1).add(Vertex2);
+    adjVertices.get(Vertex2).add(Vertex1);
+  }
+
+  int totalCost;
+  public Integer businessTrip(Graph graph, List<String> cities){
+    totalCost = 0;
+    int citiesSize = cities.size();
+
+    for (int i = 0; i < citiesSize - 1; i ++){
+
+      findPath(cities.get(i), cities.get(i + 1), graph);
+    }
+
+    return totalCost;
+  }
+
+  private void findPath(String city1, String city2, Graph graph){
+
+    if (graph.getNeighbors(city1) == null){
+      return;
+    }
+    for (Vertex vertex: graph.getNeighbors(city1)) {
+      if (Objects.equals(city2, vertex.data)){
+        totalCost += vertex.weight;
+      }
+    }
+  }
+
+
 }
