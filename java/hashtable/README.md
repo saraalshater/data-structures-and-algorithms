@@ -36,5 +36,12 @@ Implement a Hashtable Clas
 
 
 
+
 ## code challange 32 whiteBoard
+![code32](https://raw.githubusercontent.com/saraalshater/data-structures-and-algorithms/main/java/hashtable/gradle/33.jpg)
+
+
+## code challange 33 whiteBoard
 ![code33](https://raw.githubusercontent.com/saraalshater/data-structures-and-algorithms/main/java/hashtable/gradle/33.jpg)
+
+
